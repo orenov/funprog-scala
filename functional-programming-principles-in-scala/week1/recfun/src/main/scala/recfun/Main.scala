@@ -40,7 +40,7 @@ object Main {
    */
   def countChange(money: Int, coins: List[Int]): Int = {
     if (money == 0) 1
-    else if(money > 0 && coins.nonEmpty)
+    else if (money > 0 && coins.nonEmpty)
       countChange(money - coins.head, coins) + countChange(money, coins.tail)
     else 0
   }
